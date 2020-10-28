@@ -1,0 +1,8 @@
+{{!-- Create a button in `index.handlebars` that will submit the user input into the database. --}}
+<li>
+    {{burger_name}}
+
+    {{#unless devoured}}
+    <button class="devour" data-id="{{id}}" data-changedevour="{{devoured}}">Devour!</button>
+    {{/unless}}
+</li>

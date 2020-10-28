@@ -1,0 +1,36 @@
+{{!-- Burger Image --}}
+<div class="burgerContainer">
+    <img class="burgerimg" src="/assets/img/burger.png" width="20%" height="20%" alt="Burger">
+
+    {{!-- Uneaten Burger List w/buttons --}}
+    <ul>
+        <h2>Have Not Eaten</h2>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-button devoured=false}}
+        {{/unless}}
+        {{/each}}
+    </ul>
+
+    {{!-- Eaten Burger List --}}
+    <ul>
+        <h2>Have Eaten</h2>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-button devoured=true}}
+        {{/if}}
+        {{/each}}
+    </ul>
+
+    <form class="create-form">
+        {{!-- Text Box to Enter Burger Into --}}
+        <div class="burgerInfo">
+            <textarea rows="2" type="text" id="burgerId" placeholder="Burger Name"></textarea>
+        </div>
+
+        {{!-- Submit Button --}}
+        <button type="submit">Submit</button>
+        <h3>Type in the burger you'd like and click "Submit" to add it to the "Have Not Eaten" list.</h3>
+        <h3>You can then click the "Devour!" button to move it to the "Have Eaten" side.</h3>
+    </form>
+</div>
