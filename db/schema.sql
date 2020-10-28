@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS burger_db;
-CREATE DATABASE burger_db;
-USE burger_db;
+DROP DATABASE IF EXISTS heroku_2877138bb8dee35;
+CREATE DATABASE heroku_2877138bb8dee35;
+USE heroku_2877138bb8dee35;
 
 CREATE TABLE burgers
 (
